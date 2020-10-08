@@ -1,5 +1,11 @@
-const itemsContainer = document.getElementById('items') 
+const itemsContainer = document.getElementById('items')
+
+const itemList = document.getElementById('item-list')
+itemList.innerHTML = '<li> Hello World</li>' 
+console.log(itemList)
+
 import data from './data.js'
+
 
 for (let i=0; i<data.length; ++i) {
     let newDiv = document.createElement('div');
@@ -15,6 +21,7 @@ for (let i=0; i<data.length; ++i) {
     let desc = document.createElement('P')
     desc.innerText = data[i].desc
     newDiv.appendChild(desc)
+
     let price = document.createElement('P')
     price.innerText = data[i].price
     newDiv.appendChild(price)
