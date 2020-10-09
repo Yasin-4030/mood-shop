@@ -38,6 +38,8 @@ for (let i=0; i<data.length; ++i) {
     itemsContainer.appendChild(newDiv)
 }
 
+
+
 const cart = []
 
 function addItem(name, price) {
@@ -67,6 +69,10 @@ function showItems() {
         itemString += `<li>${name} $${price} x ${qty} = ${qty * price}</li>`
     }
     itemList.innerHTML = itemString
+    const all_items_button = Array.from(document.querySelectorAll('button'))
+    console.log(all_items_button)
+
+    // const all_items_button = Array.from(document.querySelectorAll("button"))
 
     // console.log(`Your total is $${getTotal()}`)
     cartTotal.innerHTML = `Your total is $${getTotal()}`
@@ -103,5 +109,7 @@ function removeItem(name, qty = 0) {
         }
     }
 }
+
+
 
 showItems()
